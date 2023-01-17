@@ -3,10 +3,14 @@ const PORT = 3000;
 const app = express();
 
 app.listen(PORT, () => {
-  console.log(PORT);
+  console.log(`listening port: ${PORT}...`);
 });
 
 app.get('/', (req, res) => {
   res.send('hello from backend to frontend!');
 });
 
+app.post('/weather', (req, res) => {
+  const cityName = req.body.cityName;
+  res.send(cityName);
+});
