@@ -1,3 +1,3 @@
-export const myKeys ={
-  API_KEY :'6a1ad6f621a3207208b8dda971ecb236'
+export const keys ={
+  API_KEY :'11107f52eb4bbb44f2ad85e4d3507d5e'
 }
