@@ -25,7 +25,7 @@ app.post('/weather', (req, res) => {
     const data = await response.json();
     if(data.cod==200) {
       const temperature = data.main.temp+'°C';
-      res.status(200).send({[cityName]: temperature;});
+      res.status(200).send({weatherText: `${cityName}: ${temperature}`});
     }  else{
       res.status(404).json({ weatherText: 'CityName is not found!' });
     }
