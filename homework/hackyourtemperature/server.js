@@ -1,5 +1,5 @@
 import express from 'express';
-import keys from "./sources/keys.js";
+import {keys} from "./sources/keys.js";
 import fetch from 'node-fetch';
 
 const PORT = 3000;
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 
-app.post('/weather', (req, res) => {
+app.post('/weather',async (req, res) => {
   const cityName = req.body.cityName;
 
   try {
