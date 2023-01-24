@@ -21,3 +21,4 @@ describe("POST /weather", () => {
     expect(response.statusCode).toBe(400);
     expect(response.text).toContain('City is not found!');
   });
+})
