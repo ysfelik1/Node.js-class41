@@ -13,6 +13,14 @@ app.get('/', (req, res) => {
 app.use(express.json());
 
 app.post('/weather', (req, res) => {
-  const cityName = req.body.cityName;
-  res.send(cityName);
+  const { cityName } = req.body;
+  if (!cityName) {
+        res.status(400);
+        res.send('Please do not forget to provide city name.');
+        return;
+      }
+      else{
+        res.status(400);
+        res.send(cityName);
+      }
 });
